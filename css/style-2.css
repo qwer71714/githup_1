@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+
+/* VIP 설명 본문시작 */
+.vip{padding-top: 150px;}
+.vip h1{font-family: 'Judson', serif;}
+.description h1{font-family: 'Judson', serif; font-size: 42px;}
+.descr_text{margin-top: 30px; font-size: 15px;}
+.descr_text span{font-size: 20px; font-weight: 900;}
+
+.descr-2{margin-top: 50px;}
+.descr-text{margin-top: 30px;}
+
+/* 카드사용 */
+.des_button{margin-top: 40px; display: flex;}
+.des_button a{background-color: #fff; border: 1px solid #000; width: 15%; margin: 0px 20px 0px 0px; text-align: center; padding: 12px;
+                font-size: 14px; font-weight: 500;}
+.des_button a:hover{background-color: #000; color: #fff;}
+
+/* red 서비스페이지 */
+.rating_text{display: flex; margin-top: 100px; justify-content: space-between; font-size: 23px; border-bottom: 1px solid #000; background-color: rgb(241, 241, 241); cursor: pointer;}
+.rating_text>div{padding: 3px 75px; font-family: 'Judson', serif; font-weight: 900;}
+
+.rat_box{margin-top: 50px;}
+    
+/* 서비스페이지 동일클래스 */
+.bx{margin-top: 50px;}
+.bx span{font-size: 22px;}
+.bx h1{font-size: 18px; margin-bottom: 12px; font-family: 'Noto Sans KR', sans-serif;}
+.bx li{padding: 0px 12px; font-family: 'Noto Sans KR', sans-serif; font-size: 14px; color: rgb(69, 69, 69); margin-top: 4px;}
+#bg{cursor: pointer;}
+
+

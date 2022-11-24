@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!-- css 부분 -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/hobbsch_message.css">
+<link rel="stylesheet" href="css/quick_menu.css">
+<link rel="stylesheet" href="css/media_query.css">
+<link rel="stylesheet" href="css/swiper.css">
+<link rel="stylesheet" href="css/footer.css">
+
+<!-- 폰트 부분 -->
+<!-- 노토산스 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+<!-- Judson -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Judson:wght@700&display=swap" rel="stylesheet">
+
+<!-- js 부분 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="js/follow-the_tooltip.js"></script>
+<script src="js/jQuery.mousetip.js"></script>
+<script src="js/quick_menu.js"></script>
+<script src="js/pos.js"></script>
+<title>호텔 리조트</title>
+<style>
+
+*{box-sizing: border-box; margin: 0; padding: 0; list-style: none; text-decoration: none; font-family: 'Noto Sans KR', sans-serif;}
+span{font-family: 'Judson' , serif; font-weight: 900;}
+a{color: #000; font-size: 600;} /* <<- 모든 "a" 태그 실행 */
+
+.container{width:1200px; margin: 0 auto;} /* <<- 웹디자인 가이드 라인 클래스 */
+.navbar_menu li a{font-size: 14px; font-weight: 500; color: #000; padding-bottom: 5px;}
+.navbar_menu-mo{display: none;}
+    
+.flex-box{display: flex; flex-wrap: wrap;}/* <<- 플랙스 박스  */
+
+#bt{display: none; z-index:2000; cursor: pointer; position: absolute; top: 17px; left: 85%;} /* <<- 삼단 버튼 (햄버거 버튼) */
+
+.flex-box{display: flex; flex-wrap: wrap;}
+
+        header {position:fixed; width: 100%; padding: 10px; right: 0; top: 0px; background-color: #fff; z-index: 99999; border-bottom: 1px solid #000;}
+        
+        header .flex-box{justify-content: space-between;} /* 자식 태그 좌/우 정렬 */
+        header .flex-box>div{width: 10%;}
+        header .flex-box>ul{width: 90%; text-align: right;}
+        header .flex-box li{display: inline;}   
+
+        /* 헤더 부분 */
+        header.navbar-shrink{background-color: #323232; padding-bottom: 20px; z-index:999999; transition: all 0.7s;}
+        .header_box nav{align-items: center;}
+
+        /* 메뉴 */
+        nav li{display: inline; padding: 0px 15px;}
+        #menu-mo{display: none;}
+
+        /* 로고 */
+        .logo {margin-top: 10px;}
+        .logo img{width: 100px;}
+
+        .message{
+            /* Required */
+            position: absolute;
+            z-index: 10;
+            display: none;
+
+            /* Optional */
+            font-size: 14px;
+            color: #fff;
+            height: auto;
+            padding: 10px;
+            border-radius: 3px;
+            box-shadow: 0 1px 4px #666;
+            background: #323232;
+        }
+
+        /* 캐러셀 */
+        .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        display: inline;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+    /* hoterl부분 */
+    #hoterl-2,#hoterl-3,#hoterl-4{display: none;}
+    
+    /* hotel-bt클릭시 버튼 유지 */
+    .clicked{font-weight:600; color: #fff; background-color: #000;}
+
+</style>
+</head>
+<body>
+<header>
+    <div class="header_box container">          
+        <nav class="flex-box">
+            <div  class="logo"><a class="" href="index-1.html"><img src="img/logo-1.png" alt=""></a></div>
+            <ul  class="navbar_menu" id="menu">
+              <li> <a class="" href="">숙소</a ></li>
+              <li> <a class="" href="">항공</a> </li>                  
+              <li> <a class="" href="">이벤트</a> </li>                    
+              <li> <a class="" href="index-2.html">VIP</a> </li>                    
+              <li> <a class="" href="">액티비티</a> </li>                    
+              <li> <a class="" href="">고객센터</a> </li>                                  
+            </ul>
+        </nav>
+                        <!-- 햄버거 버튼 -->
+            <div id="bt" ><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#fff" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg></div>
+    </div>    
+</header>
+
+
+<section class="main">
+    <div class="main_box">
+        <img src="img/psi.jpg" alt="">
+        <div class="main_box_text">
+            <h1>Sheraton</h1>
+            <p>아름다움과 평온함 그리고 아늑함 공존하는 호텔 리조트</p>
+        </div>
+    </div>
+</section>
+
+<main>
+<!-- 숙소 본문 페이지 -->
+
+<section class="promotional-event">
+    <div class="event-background container">
+        <div class="event_text">
+            <h1>PRETTY HOTEL</h1>
+            <div class="event_text_2">
+                <div class="selbt clicked" id="hotel-bt-1">대한민국</div>
+                <div class="selbt" id="hotel-bt-2">일본</div>
+                <div class="selbt" id="hotel-bt-3">미국</div>
+            </div>
+        </div>
+<!-- kr hotel -->
+        <div id="hoterl-1">
+            <div class="hotel_resort_img">
+                <div>
+                    <img src="img/hotel/kr/hotel_kr_1.jpg" alt="">
+                        <div class="hotel_text">
+                            <h1>대한민국</h1>
+                            <p>서울 중구 퇴계로 67</p>
+                        </div>
+                        
+                        <div class="hoterl_text_2">
+                            <h1>레스케이프 호텔</h1>
+                            <p>더보기 +</p>
+                        </div>
+                </div>
+
+                <div>
+                    <img src="img/hotel/kr/hotel_kr_2.jpg" alt="">
+                    <div class="hotel_text">
+                        <h1>대한민국</h1>
+                        <p>서울 중구 마른내로 28</p>
+                    </div>
+                    
+                    <div class="hoterl_text_2">
+                        <h1>나인트리 프리미어</h1>
+                        <p>더보기 +</p>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="img/hotel/kr/hotel_kr_3.jpg" alt="">
+                    <div class="hotel_text">
+                        <h1>대한민국</h1>
+                        <p>서울 종로구 삼봉로 71</p>
+                    </div>
+                    
+                    <div class="hoterl_text_2">
+                        <h1>신라스테이 광화문</h1>
+                        <p>더보기 +</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel_resort_img">
+                <div>
+                    <img src="img/hotel/kr/hotel_kr_4.jpg" alt="">
+                        <div class="hotel_text">
+                            <h1>대한민국</h1>
+                            <p>제주 제주시 초천읍 1278</p>
+                        </div>
+                        
+                        <div class="hoterl_text_2">
+                            <h1>에코랜드 호텔</h1>
+                            <p>더보기 +</p>
+                        </div>
+                </div>
+
+                <div>
+                    <img src="img/hotel/kr/hotel_kr_5.jpg" alt="">
+                    <div class="hotel_text">
+                        <h1>대한민국</h1>
+                        <p>제주 제주시 도령로 83</p>
+                    </div>
+                    
+                    <div class="hoterl_text_2">
+                        <h1>롯데시티호텔 제주</h1>
+                        <p>더보기 +</p>
+                    </div>
+                </div>
+
+                <div class="xbox">
+                    <a href=""><img src="img/xbox.jpg" alt=""></a>
+                <!-- + 이미지 호버시 나타나는 메세지 창 -->
+                <div class="message">
+                    <p>클릭하시면 숙소 사이트로 이동합니다.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+<!-- jp hotel -->
+        <div id="hoterl-2">
+            <div class="hotel_resort_img">
+                <div>
+                    <img src="img/hotel/jp/hotel_jp_1.jpg" alt="">
+                        <div class="hotel_text">
+                            <h1>일본</h1>
+                            <p>도쿄도 츄오구 긴자 6丁目2-11</p>
+                        </div>
+                        
+                        <div class="hoterl_text_2">
+                            <h1>더 로얄 파크 캔버스 긴자 코리도</h1>
+                            <p>더보기 +</p>
+                        </div>
+                </div>
+
+                <div>
+                    <img src="img/hotel/jp/hotel_jp_2.jpg" alt="">
+                    <div class="hotel_text">
+                        <h1>일본</h1>
+                        <p>도쿄도 타이토구 네기시 3丁目12-16</p>
+                    </div>
+                    
+                    <div class="hoterl_text_2">
+                        <h1>더 반 도쿄</h1>
+                        <p>더보기 +</p>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="img/hotel/jp/hotel_jp_3.jpg" alt="">
+                    <div class="hotel_text">
+                        <h1>일본</h1>
+                        <p>도쿄도 타이토구 네기시 3丁目4-5</p>
+                    </div>
+                    
+                    <div class="hoterl_text_2">
+                        <h1>랜드어바웃 도쿄</h1>
+                        <p>더보기 +</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel_resort_img">
+                <div>
+                    <img src="img/hotel/jp/hotel_jp_4.jpg" alt="">
+                        <div class="hotel_text">
+                            <h1>일본</h1>
+                            <p>도쿄도 주오구 니혼바시 하마초 3丁目20-2</p>
+                        </div>
+                        
+                        <div class="hoterl_text_2">
+                            <h1>하마초 호텔 도쿄</h1>
+                            <p>더보기 +</p>
+                        </div>
+                </div>
+
+                <div>
+                    <img src="img/hotel/jp/hotel_jp_5.jpg" alt="">
+                    <div class="hotel_text">
+                        <h1>일본</h1>
+                        <p>도쿄도 지요다구 칸다 사쿠마초 3丁目38</p>
+                    </div>
+                    
+                    <div class="hoterl_text_2">
+                        <h1>퍼스트 캐빈 이치가야</h1>
+                        <p>더보기 +</p>
+                    </div>
+                </div>
+
+                <div class="xbox">
+                    <a href=""><img src="img/xbox.jpg" alt=""></a>
+                <!-- + 이미지 호버시 나타나는 메세지 창 -->
+                <div class="message">
+                    <p>클릭하시면 숙소 사이트로 이동합니다.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+<!-- us hotel -->
+        <div id="hoterl-3">
+            <div class="hotel_resort_img">
+                <div>
+                    <img src="img/hotel/us/hotel_us_1.jpg" alt="">
+                        <div class="hotel_text">
+                            <h1>미국</h1>
+                            <p>485 7번가 뉴욕 10018</p>
+                        </div>
+                        
+                        <div class="hoterl_text_2">
+                            <h1>목시 NYC 타임스 스퀘어</h1>
+                            <p>더보기 +</p>
+                        </div>
+                </div>
+
+                <div>
+                    <img src="img/hotel/us/hotel_us_2.jpg" alt="">
+                    <div class="hotel_text">
+                        <h1>미국</h1>
+                        <p>55 처치 세인트 뉴욕 10007</p>
+                    </div>
+                    
+                    <div class="hoterl_text_2">
+                        <h1>밀레니엄 다운타운 뉴욕</h1>
+                        <p>더보기 +</p>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="img/hotel/us/hotel_us_3.jpg" alt="">
+                    <div class="hotel_text">
+                        <h1>미국</h1>
+                        <p>9620 Airport Blvd 로스앤젤레스</p>
+                    </div>
+                    
+                    <div class="hoterl_text_2">
+                        <h1>로스앤젤레스 에어포트 호텔</h1>
+                        <p>더보기 +</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel_resort_img">
+                <div>
+                    <img src="img/hotel/us/hotel_us_4.jpg" alt="">
+                        <div class="hotel_text">
+                            <h1>미국</h1>
+                            <p>1400 헐리우드 로스앤젤레스</p>
+                        </div>
+                        
+                        <div class="hoterl_text_2">
+                            <h1>더 가드프리 호텔 할리우드</h1>
+                            <p>더보기 +</p>
+                        </div>
+                </div>
+
+                <div>
+                    <img src="img/hotel/us/hotel_us_5.jpg" alt="">
+                    <div class="hotel_text">
+                        <h1>미국</h1>
+                        <p>720 Fannin Street 시티 센터 휴스턴</p>
+                    </div>
+                    
+                    <div class="hoterl_text_2">
+                        <h1>클럽 쿼터스 호텔 인 휴스턴</h1>
+                        <p>더보기 +</p>
+                    </div>
+                </div>
+
+                <div class="xbox">
+                    <a href=""><img src="img/xbox.jpg" alt=""></a>
+                <!-- + 이미지 호버시 나타나는 메세지 창 -->
+                <div class="message">
+                    <p>클릭하시면 숙소 사이트로 이동합니다.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--     <div class="quick_menu">
+        <ul>
+            <li><a href="">숙소 예약</a></li>
+            <li><a href="">항공 예약</a></li>
+            <li><a href="">렌터카</a></li>
+            <li><a href="">1:1 고객센터</a></li>
+            <li><a href="">My 페이지</a></li>
+        </ul>
+    </div> -->
+</section>
+
+<!-- 이벤트 본문페이지 -->
+<section class="event container">
+    <div class="event_box">
+        <h1>EVENT</h1>
+
+    <div class="swiper_box">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <img src="img/event/event-1.jpg" alt="">
+                <div class="swiper_text">
+                    <p>겨울대비 할인</p>
+                    <p>다가올 겨울을 대비하자! 50%할인</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="img/event/event-1.jpg" alt="">
+                <div class="swiper_text">
+                    <p>겨울대비 할인</p>
+                    <p>다가올 겨울을 대비하자! 50%할인</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="img/event/event-1.jpg" alt="">
+                <div class="swiper_text">
+                    <p>겨울대비 할인</p>
+                    <p>다가올 겨울을 대비하자! 50%할인</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="img/event/event-1.jpg" alt="">
+                <div class="swiper_text">
+                    <p>겨울대비 할인</p>
+                    <p>다가올 겨울을 대비하자! 50%할인</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="img/event/event-1.jpg" alt="">
+                <div class="swiper_text">
+                    <p>겨울대비 할인</p>
+                    <p>다가올 겨울을 대비하자! 50%할인</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="img/event/event-1.jpg" alt="">
+                <div class="swiper_text">
+                    <p>겨울대비 할인</p>
+                    <p>다가올 겨울을 대비하자! 50%할인</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="img/event/event-1.jpg" alt="">
+                <div class="swiper_text">
+                    <p>겨울대비 할인</p>
+                    <p>다가올 겨울을 대비하자! 50%할인</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="img/event/event-1.jpg" alt="">
+                <div class="swiper_text">
+                    <p>겨울대비 할인</p>
+                    <p>다가올 겨울을 대비하자! 50%할인</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="img/event/event-1.jpg" alt="">
+                <div class="swiper_text">
+                    <p>겨울대비 할인</p>
+                    <p>다가올 겨울을 대비하자! 50%할인</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+    </div>
+</section>
+
+<!-- 액티브 본문페이지 -->
+<section class="activities container">
+    <div class="activities_box">
+        <h1>ACTIVITIES</h1>
+
+        <div class="acti">
+            <img src="img/kp.jpeg" alt="">
+            <div class="acti_text">
+                <p><span>Sheraton</span> 공식 홈페이지에서 20만원 결제시 +30,000포인트 적립 할수 있습니다</p>
+                <p><span>VIP</span> 연이용권자 이시면 +3,000 포인트 추가 적립 할수 있습니다</p>
+                <p>각종 행사중이나 이벤트 참여만하시면 +1,200 포인트 적립 할수 있습니다</p>
+                <p><span>Sheraton</span> 전용 포인트 충천하면 충전금액에 따라 추가 적립 할수 있습니다</p>
+                <br>
+                <p><span> VIP, ACTIVITIES</span> 를 자세하게 보려면 아래 버튼을 눌러주세요</p>
+
+                <div class="acit_butten">
+                    <div>
+                        <a href="">VIP</a>
+                    </div>
+                    <div>
+                        <a href="">ACTIVITIES</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <footer class="footer">
+    <div class="footer_text_box">
+        <nav>
+            <p><a href="#">개인정보처리방침</a></p>
+            <p><a href="#">여행약관</a></p>
+            <p><a href="#">이용약관</a></p>
+            <p><a href="#">여행보험</a></p>
+            <p><a href="#">환불</a></p>
+            <p><a href="#">상담</a></p>
+        </nav>
+    </div>
+    <div class="footer_box container">
+       <div class="footer_logo">
+            <img src="img/logo-2.png" alt="">
+            <div class="footer_logo_text">
+                <li>(주)Sheraton <span>|</span> 대표이사: 이성환 <span>|</span> 사업자등록번호: 102-56-4848</li>
+                <li>서울특별시 중구 퇴계로8길 31-9 <span>|</span> TEL: 02-2586-2741 <span>|</span> FAX: 02-254-1024 </li>
+                <li>Copyright (c) 2022 Sheraton. All rights reserved</li>
+                <li></li>
+            </div>
+        </div>
+    </div>
+ </footer>
+</main>
+
+
+<script> /* 캐러셀 이벤트본문 */
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    autoplay:{
+        delay : 4500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
+  });
+</script>
+
+<!-- 클릭이벤트 -->
+<script>
+var selbt = document.getElementsByClassName("selbt");
+
+function handleClick(event) {
+  console.log(event.target);
+  // console.log(this);
+  // 콘솔창을 보면 둘다 동일한 값이 나온다
+
+  console.log(event.target.classList);
+
+  if (event.target.classList[0] === "clicked") {
+    event.target.classList.remove("clicked");
+  } else {
+    for (var i = 0; i < selbt.length; i++) {
+        selbt[i].classList.remove("clicked");
+    }
+
+    event.target.classList.add("clicked");
+  }
+}
+
+function init() {
+  for (var i = 0; i < selbt.length; i++) {
+    selbt[i].addEventListener("click", handleClick);
+  }
+}
+init();
+</script>
+</body>
+</html>

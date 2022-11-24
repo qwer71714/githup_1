@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* css 본문시작 */
+/* main 메인 본문 시작 */
+.main{height: 600px;}
+.main_box{width: 100%;}
+.main_box img{width: 100%; filter: brightness(40%);}
+.main_box_text{color: #fff; position: absolute; top: 45%; z-index: 1; left: 50%; transform: translate(-50%, -50%);
+                font-weight: 400; text-align: center; justify-content: center;}
+
+.main_box_text h1{font-family: 'Judson', serif; font-weight: 900; font-size: 50px; }
+.main_box_text p{margin-top: 12px; font-weight: 300; font-size: 16px;}
+
+main{z-index: 10; position: relative;}
+/* 프로모션 디자인 본문 시작 */ 
+.promotional-event{background-color: #fff; padding-top: 80px;}
+.event_text{display: flex; align-items: baseline; width: 100%; justify-content: space-between;}
+.event_text h1{font-size: 42px; font-family: 'Judson', serif;}
+.event_text_2{display: flex; margin-right: 30px; cursor: pointer; font-size: 14px; font-weight: 300;}
+.event_text_2>div{padding: 0px 20px; padding-top: 2px; padding-bottom: 2px;}
+
+/* 프로모션 디자인 이미지 본문 */
+.hotel_resort_img{display: flex; margin-top: 60px; align-items: center;}
+.hotel_resort_img>div{margin-right: 50px;}
+.hotel_resort_img img{width: 100%;}
+.hotel_text{margin-top: 12px; display: flex; border-bottom: 1px solid #000; padding-bottom: 12px; align-items: center; justify-content: space-between;}
+.hotel_text h1{font-size: 20px; font-weight: bold;}
+.hoterl_text_2{margin-top: 20px;}
+.hoterl_text_2 h1{font-size: 22px;}
+.hoterl_text_2 p{margin-top: 12px; font-size: 14px; cursor: pointer;}
+
+/* 엑스박스 */
+.xbox{align-items: center; text-align: center; cursor: pointer;}
+.xbox img{width: 33.33%; cursor: pointer;}
+
+/* Event // 이벤트 본문페이지 */
+.event_box{margin-top: 100px;}
+.event_box h1{font-family: 'Judson', serif; font-size: 42px;}
+.event_box img{width: 100%;}
+.swiper_box{margin-top: 50px;}
+.swiper_text{text-align: left; margin-top: 22px; font-size: 18px; font-weight: 600; margin-bottom: 22px;}
+.swiper_text p:nth-child(2){font-size: 15px; font-weight: 400; margin-top: 10px;}
+
+/* activities 액티비트 본문 */
+.activities{padding-top: 100px;}
+.activities_box h1{font-family: 'Judson' , serif; font-size: 42px;}
+
+.acti{display: flex; margin-top: 50px; align-items: center;}
+.acit_butten{align-items: baseline; justify-content: baseline; margin-top: 100px; display: flex;}
+
+.acit_butten>div a{border: 1px solid #000; margin-right: 20px; padding: 7px 40px; text-align: center;}
+.acit_butten>div a:hover{background-color: #000; color: #fff;}
+.acti img{width: 50%;}
+.acti_text{padding: 0px 0px 0px 50px; margin-top: 50px;}
+.acti_text>p{margin-top: 4px;}
+.acti_text p{font-size: 15px;}
+.acti_text span{font-size: 20px;}

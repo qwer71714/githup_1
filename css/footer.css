@@ -1,0 +1,13 @@
+/* 푸터 본문 */
+footer{margin-top: 200px; background-color: #282828;}
+.footer_box{padding-top: 20px;}
+.footer_logo{display: flex; align-items: center; padding-bottom: 30px;}
+.footer_logo img{width: 100px}
+.footer_text_box{border-bottom: 1px solid #fff; padding-bottom: 20px; padding-top: 20px;}
+.footer_text_box nav{display: flex; text-align: center; justify-content: center;}
+.footer_text_box nav p{padding: 0px 20px;}
+.footer_text_box nav p a{color: #fff; font-size: 13px;}
+
+.footer_logo_text{padding: 0px 30px;}
+.footer_logo_text li{color: rgb(128, 128, 128); font-size: 13px; margin-top: 5px;}
+.footer_logo_text li span{padding: 0px 10px; color: #464646; font-size: 16px; font-weight: 600;}
