@@ -15,7 +15,7 @@
     position: absolute;
     left: 50%;/* 항상 수평 영역의 중앙에 위치하도록 설정 */
     transform: translate(-50%, -50%);
-    top: 200px;
+    top: 420px;
     
     display: block;
     width:50%;
@@ -44,5 +44,6 @@
 /* 모달창 body */
 .modal-body-text h1{font-size: 20px;}
 .ps{margin-top: 50px; text-align: left; padding: 10px;}
-.ps h2{margin-bottom: 5px; font-size: 18px;}
+.ps-1{margin-top: 22px;}
+.ps h2{margin-bottom: 20px; font-size: 22px;}
 .ps li{font-size: 14px; color: rgb(69, 69, 69); padding: 0px 30px; margin-top: 4px;}

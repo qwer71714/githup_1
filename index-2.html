@@ -19,7 +19,6 @@
 
 <!-- js부분 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/pos.js"></script>
 
 <title>VIP</title>
 <style>
@@ -85,6 +84,13 @@ span{font-family: 'Judson' , serif; font-weight: 900;}
                 </svg></div>
         </div>    
 </header>
+
+
+<section class="vip-page">
+    <div>
+        <img src="img/vip-page.jpg" alt="">
+    </div>
+</section>
 
 <main>
     <!-- VIP 월이용금 본문시작 -->
@@ -312,11 +318,31 @@ span{font-family: 'Judson' , serif; font-weight: 900;}
                     <h1>기타 복지관련 혜택</h1>
 
                     <div class="ps">
-                        <h2>1 ) 국내 호텔 리조트</h2>
-                        <li>국가 유공자 : 4.3%</li>
-                        <li>중증장애인, 경증장애인 : 4.3%</li>
-                        <li>취약계층 : 4.2%</li>
-                        <h3></h3>
+                        <h2>1 ) 주차이용</h2>
+                        <li>장애인 복지카드, 국가유공자 증을 카운터에 제시시 주차이용할인 적용 됩니다.</li>
+                        <li>최소 1일~8일 까지 주차이용 할인 적용 하지만, 8일 이상 할인 혜택 적용하지 못하오니</li>
+                        <li>기존가격으로 결제되오나 주의해주세요. (1일당 1,5000원)</li>
+                    <div class="ps-1">
+                        <li>주차장 만석시 주차 안내요원 지시에 따라 주차하시면 주차이용할인 혜택을 적용됩니다.</li>
+                        <li>하지만 주차요원 지시에 따르지 않고 주차이용하시면 할인 혜택 적용 제외됩니다.</li>
+                    </div>
+
+                    <div class="ps-1">
+                        <li>가족차량이시면 2대 까지 할인 결합 적용 되오나, 2대이상시 적용 제외됩니다.</li>
+                        <li>대신 장애인,국가유공자 동승자가 2명 이상시 최대 3대까지 결합 할인 적용됩니다.</li>
+                    </div>
+
+                    <div class="ps">
+                        <h2>2 ) 대리주차</h2>
+                        <li>주간에는 대리주차 이용 불가하오나 야간시 대리주차 이용 가능합니다.</li>
+                        <li>주간 18:00 ~ 21:00 | 야간 21:00 ~ 4:00</li>
+                        <li>야간 대리주차 선불금 : 50,000원</li>
+                    <div class="ps-1">
+                        <li>주차장 만석시 대리주차 이용하기가 어렵습니다.</li>
+                        <li>야간도착 예정이시면 대리주차 예약을 추천드립니다.</li>
+                        <li>또한 숙소 예약 일정에는 주차장 만석시 대리주차 예약불가 합니다.</li>
+                    </div>
+                    </div>
                     </div>
                 </div>
             <span class="modal-close">닫기</span>
@@ -349,36 +375,7 @@ span{font-family: 'Judson' , serif; font-weight: 900;}
     </div>
 </footer>
 
-
-
-<script>
-    var selbt = document.getElementsByClassName("selbt");
-    
-    function handleClick(event) {
-      console.log(event.target);
-      // console.log(this);
-      // 콘솔창을 보면 둘다 동일한 값이 나온다
-    
-      console.log(event.target.classList);
-    
-      if (event.target.classList[0] === "clicked") {
-        event.target.classList.remove("clicked");
-      } else {
-        for (var i = 0; i < selbt.length; i++) {
-            selbt[i].classList.remove("clicked");
-        }
-    
-        event.target.classList.add("clicked");
-      }
-    }
-    
-    function init() {
-      for (var i = 0; i < selbt.length; i++) {
-        selbt[i].addEventListener("click", handleClick);
-      }
-    }
-    init();
-</script>
+<script src="js/pos.js"></script>
 <script src="js/modal-1.js"></script>
 </body>
 </html>

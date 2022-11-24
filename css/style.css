@@ -5,7 +5,7 @@
 .main{height: 600px;}
 .main_box{width: 100%;}
 .main_box img{width: 100%; filter: brightness(40%);}
-.main_box_text{color: #fff; position: absolute; top: 45%; z-index: 1; left: 50%; transform: translate(-50%, -50%);
+.main_box_text{color: #fff; position: absolute; top: 35%; z-index: 1; left: 50%; transform: translate(-50%, -50%);
                 font-weight: 400; text-align: center; justify-content: center;}
 
 .main_box_text h1{font-family: 'Judson', serif; font-weight: 900; font-size: 50px; }
