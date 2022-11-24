@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!-- css 부분 -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style-2.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/modal.css">
+
+<!-- 폰트 부분 -->
+<!-- 노토산스 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+<!-- js부분 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/pos.js"></script>
+
+<title>VIP</title>
+<style>
+*{box-sizing: border-box; margin: 0; padding: 0; list-style: none; text-decoration: none; font-family: 'Noto Sans KR', sans-serif;}
+a{color: #000; font-size: 600;} /* <<- 모든 "a" 태그 실행 */
+span{font-family: 'Judson' , serif; font-weight: 900;}
+
+.container{width:1200px; margin: 0 auto;} /* <<- 웹디자인 가이드 라인 클래스 */
+.navbar_menu li a{font-size: 14px; font-weight: 500; color: #000; padding-bottom: 5px;}
+.navbar_menu-mo{display: none;}
+    
+.flex-box{display: flex; flex-wrap: wrap;}/* <<- 플랙스 박스  */
+
+#bt{display: none; z-index:2000; cursor: pointer; position: absolute; top: 17px; left: 85%;} /* <<- 삼단 버튼 (햄버거 버튼) */
+
+.flex-box{display: flex; flex-wrap: wrap;}
+
+        header {position:fixed; width: 100%; padding: 10px; right: 0; top: 0px; background-color: #fff; z-index: 9999; border-bottom: 1px solid #000;}
+        
+        header .flex-box{justify-content: space-between;} /* 자식 태그 좌/우 정렬 */
+        header .flex-box>div{width: 10%;}
+        header .flex-box>ul{width: 90%; text-align: right;}
+        header .flex-box li{display: inline;}   
+
+        /* 헤더 부분 */
+        header.navbar-shrink{background-color: #323232; padding-bottom: 20px; z-index:9999; transition: all 0.7s;}
+        .header_box nav{align-items: center;}
+
+        /* 메뉴 */
+        nav li{display: inline; padding: 0px 15px;}
+        #menu-mo{display: none;}
+
+        /* 로고 */
+        .logo {margin-top: 10px;}
+        .logo img{width: 100px;}
+
+        /* hotel-bt클릭시 버튼 유지 */
+        .clicked{color: #fff; background-color: #000; cursor: default;}
+
+        #rating-2,#rating-3,#rating-4,#rating-5{display: none;}
+
+
+
+</style>
+</head>
+<body>
+<header>
+        <div class="header_box container">          
+            <nav class="flex-box">
+                <div  class="logo"><a class="" href="index-1.html"><img src="img/logo-1.png" alt=""></a></div>
+                <ul  class="navbar_menu" id="menu">
+                  <li> <a class="" href="">숙소</a ></li>
+                  <li> <a class="" href="">항공</a> </li>                  
+                  <li> <a class="" href="">이벤트</a> </li>                    
+                  <li> <a class="" href="index-2.html">VIP</a> </li>                    
+                  <li> <a class="" href="">액티비티</a> </li>                    
+                  <li> <a class="" href="">고객센터</a> </li>                                  
+                </ul>
+            </nav>
+                            <!-- 햄버거 버튼 -->
+                <div id="bt" ><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#fff" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg></div>
+        </div>    
+</header>
+
+<main>
+    <!-- VIP 월이용금 본문시작 -->
+    <section class="vip container">
+        <div class="description">
+            <h1>Sheraton</h1>
+            <div class="descr_text">
+                <p><span>VIP</span> 처음 이용하셨나요? 걱정하지마세요 저희는 최상의 서비스 품질과 편의성 제공해드리도록 노력하겠습니다.</p>
+                <p>그리고 낭비했다 생각 보다는 월구독 해주기 잘했다 라는 생각을 들겠음 저희가 항상 노력하겠습니다.</p>
+            </div>
+
+            <div class="descr-2">
+                <h1>Card use</h1>
+                <div class="descr-text">
+                    <p>VIP 혜택사용 하시러면 Sheraton전용 카드를 사용하셔야 합니다.</p>
+                    <p>그리고 1년 연회비만 내시면 추가 등급별에 따라 추가적립 혜택을 받을수 있습니다.</p>
+                    <p>부담갖지말고, 다양한 혜택을 누려 보세요</p>
+
+                    <div class="des_button">
+                        <a>자세히 보기</a>
+                        <a>발급 하러 가기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 등급별 -->
+        <div class="monthly_subscription">
+            <div class="rating">
+                <div class="rating_text">
+                    <div class="selbt clicked" id="rating-bt-1">Red</div>
+                    <div class="selbt" id="rating-bt-2">Black</div>
+                    <div class="selbt" id="rating-bt-3">Gold</div>
+                    <div class="selbt" id="rating-bt-4">Diamond</div>
+                    <div class="selbt" id="rating-bt-5">Red diamond</div>
+                </div>
+            </div>
+            <!-- VIP (등급) 설명 시작 -->
+
+            <!-- 레드 -->
+            <div class="rat_box" id="rating-1">
+                <div class="bx">
+                    <h1><span>Red</span></h1>
+                    <li>국내 호텔 리조트 할인 4% 혜택 적용</li>
+                    <li>항공 이용금액 2% 할인</li>
+                    <li>항공 이용금액에 따라 +0.1% 포인트 적립</li>
+                    <li>*기본 숙박비 1인 6만원 이상</li>
+
+                    <div class="bx">
+                        <h1>1.주차이용 할인</h1>
+                        <li>1일 주차이용 요금 무료</li>
+                        <li>1일 이상 2,000원 할인</li>
+                        <li>장애인 주차이용시 1일 이상 2,500원 할인</li>
+                        <li class="bg" id="bg">기타 복지관련 혜택 +</li>
+                    </div>
+
+                    <div class="bx">
+                        <h1>2.호텔 서비스 이용 할인</h1>
+                        <li>2~3성급 호텔 아침식사~점심식사 5,000원 할인</li>
+                        <li>2~3성급 호텔 특별 저녁식사 8,000원 할인</li>
+                        <li class="bg" id="bg">호텔내 피시방옵션 1시간 충천시 1,300원 할인 +</li>
+                        <li class="bg" id="bg">내 피시방 음식 서비스 아침식사~저녁식사 서비스 동일혜택 +</li>
+                    </div>
+
+                    <div class="bx">
+                        <h1>3.액티비티 서비스 혜택</h1>
+                        <li class="bg" id="bg">액티비티 서비스 이용시 +100포인트 적립 +</li>
+                        <li class="bg" id="bg">Sheraton 멤버쉽카드 이용시 OTT 플랫품 월이용료 할인+</li>
+                        <li class="bg" id="bg">Royal Money 혜택카드 +</li>
+                        <li class="bg" id="bg">#Cloud 서비스 +</li>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 블랙 -->
+            <div class="rat_box" id="rating-2">
+                <div class="bx">
+                    <h1><span>Black</span></h1>
+                    <li>국내 호텔 리조트 할인 4.5% 혜택 적용</li>
+                    <li>항공 이용금액 2.5% 할인</li>
+                    <li>항공 이용금액에 따라 +0.2% 포인트 적립</li>
+                    <li>*기본 숙박비 1인 6만원 이상</li>
+
+                    <div class="bx">
+                        <h1>1.주차이용 할인</h1>
+                        <li>1일 주차이용 요금 무료</li>
+                        <li>1일 이상 2,000원 할인</li>
+                        <li>장애인 주차이용시 1일 이상 2,500원 할인</li>
+                        <li class="bg" id="bg">기타 복지관련 혜택 +</li>
+                    </div>
+
+                    <div class="bx">
+                        <h1>2.호텔 서비스 이용 할인</h1>
+                        <li>2~3성급 호텔 아침식사~점심식사 5,500원 할인</li>
+                        <li>2~3성급 호텔 특별 저녁식사 8,500원 할인</li>
+                        <li class="bg" id="bg">호텔내 피시방옵션 1시간 충천시 1,300원 할인 +</li>
+                        <li class="bg" id="bg">호텔내 피시방 음식 서비스 아침식사~저녁식사 서비스 동일혜택 +</li>
+                    </div>
+
+                    <div class="bx">
+                        <h1>3.액티비티 서비스 혜택</h1>
+                        <li class="bg" id="bg">액티비티 서비스 이용시 +150포인트 적립 +</li>
+                        <li class="bg" id="bg">Sheraton 멤버쉽카드 이용시 OTT 플랫품 월이용료 할인+</li>
+                        <li class="bg" id="bg">Royal Money 혜택카드 +</li>
+                        <li class="bg" id="bg">#Cloud 서비스 +</li>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 골드 -->
+            <div class="rat_box" id="rating-3">
+                <div class="bx">
+                    <h1><span>Gold</span></h1>
+                    <li>국내 호텔 리조트 할인 5.5% 혜택 적용</li>
+                    <li>항공 이용금액 3% 할인</li>
+                    <li>항공 이용금액에 따라 +0.6% 포인트 적립</li>
+                    <li>*기본 숙박비 1인 6만원 이상</li>
+
+                    <div class="bx">
+                        <h1>1.주차이용 할인</h1>
+                        <li>1일 주차이용 요금 무료</li>
+                        <li>1일 이상 2,500원 할인</li>
+                        <li>장애인 주차이용시 1일 이상 3,500원 할인</li>
+                        <li class="bg" id="bg">기타 복지관련 혜택 +</li>
+                    </div>
+
+                    <div class="bx">
+                        <h1>2.호텔 서비스 이용 할인</h1>
+                        <li>2~3성급 호텔 아침식사~점심식사 6,000원 할인</li>
+                        <li>2~3성급 호텔 특별 저녁식사 10,000원 할인</li>
+                        <li class="bg" id="bg">호텔내 피시방옵션 1시간 충천시 1,600원 할인 +</li>
+                        <li class="bg" id="bg">호텔내 피시방 음식 서비스 아침식사~저녁식사 서비스 동일혜택 +</li>
+                    </div>
+
+                    <div class="bx">
+                        <h1>3.액티비티 서비스 혜택</h1>
+                        <li class="bg" id="bg">액티비티 서비스 이용시 +210포인트 적립 +</li>
+                        <li class="bg" id="bg">Sheraton 멤버쉽카드 이용시 OTT 플랫품 월이용료 할인+</li>
+                        <li class="bg" id="bg">Royal Money 혜택카드 +</li>
+                        <li class="bg" id="bg">#Cloud 서비스 +</li>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 다이아몬드 -->
+            <div class="rat_box" id="rating-4">
+                <div class="bx">
+                    <h1><span>Diamond</span></h1>
+                    <li>국내 호텔 리조트 할인 6% 혜택 적용</li>
+                    <li>항공 이용금액 4% 할인</li>
+                    <li>항공 이용금액에 따라 +0.8% 포인트 적립</li>
+                    <li>*기본 숙박비 1인 6만원 이상</li>
+
+                    <div class="bx">
+                        <h1>1.주차이용 할인</h1>
+                        <li>1일 주차이용 요금 무료</li>
+                        <li>1일 이상 2,500원 할인</li>
+                        <li>장애인 주차이용시 1일 이상 3,500원 할인</li>
+                        <li class="bg" id="bg">기타 복지관련 혜택 +</li>
+                    </div>
+
+                    <div class="bx">
+                        <h1>2.호텔 서비스 이용 할인</h1>
+                        <li>2~3성급 호텔 아침식사~점심식사 6,000원 할인</li>
+                        <li>2~3성급 호텔 특별 저녁식사 10,000원 할인</li>
+                        <li class="bg" id="bg">호텔내 피시방옵션 1시간 충천시 2,500원 할인 +</li>
+                        <li class="bg" id="bg">호텔내 피시방 음식 서비스 아침식사~저녁식사 서비스 동일혜택 +</li>
+                    </div>
+
+                    <div class="bx">
+                        <h1>3.액티비티 서비스 혜택</h1>
+                        <li class="bg" id="bg">액티비티 서비스 이용시 +230포인트 적립 +</li>
+                        <li class="bg" id="bg">Sheraton 멤버쉽카드 이용시 OTT 플랫품 월이용료 할인+</li>
+                        <li class="bg" id="bg">Royal Money 혜택카드 +</li>
+                        <li class="bg" id="bg">#Cloud 서비스 +</li>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 레드 다이아몬드 -->
+            <div class="rat_box" id="rating-5">
+                <div class="bx">
+                    <h1><span>Red diamond</span></h1>
+                    <li>국내 호텔 리조트 할인 12% 혜택 적용</li>
+                    <li>항공 이용금액 7.2% 할인</li>
+                    <li>항공 이용금액에 따라 +1.2% 포인트 적립</li>
+                    <li>*기본 숙박비 1인 6만원 이상</li>
+
+                    <div class="bx">
+                        <h1>1.주차이용 할인</h1>
+                        <li>1일 주차이용 요금 무료</li>
+                        <li>1일 이상 3,000원 할인</li>
+                        <li>장애인 주차이용시 1일 이상 4,000원 할인</li>
+                        <li class="bg" id="bg">기타 복지관련 혜택 +</li>
+                    </div>
+
+                    <div class="bx">
+                        <h1>2.호텔 서비스 이용 할인</h1>
+                        <li>2~3성급 호텔 아침식사~점심식사 8,000원 할인</li>
+                        <li>2~3성급 호텔 특별 저녁식사 9,000원 할인</li>
+                        <li class="bg" id="bg">호텔내 피시방옵션 1시간 충천시 2,500원 할인 +</li>
+                        <li class="bg" id="bg">호텔내 피시방 음식 서비스 아침식사~저녁식사 서비스 동일혜택 +</li>
+                    </div>
+
+                    <div class="bx">
+                        <h1>3.액티비티 서비스 혜택</h1>
+                        <li class="bg" id="bg">액티비티 서비스 이용시 +300포인트 적립 +</li>
+                        <li class="bg" id="bg">Sheraton 멤버쉽카드 이용시 OTT 플랫품 월이용료 할인+</li>
+                        <li class="bg" id="bg">Royal Money 혜택카드 +</li>
+                        <li class="bg" id="bg">#Cloud 서비스 +</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<!-- 모달창 -->
+<modal>
+    <div class="modal">
+        <div class="modal-wrap">
+            <div class="modal-body">
+                <div class="modal-body-text">
+                    <h1>기타 복지관련 혜택</h1>
+
+                    <div class="ps">
+                        <h2>1 ) 국내 호텔 리조트</h2>
+                        <li>국가 유공자 : 4.3%</li>
+                        <li>중증장애인, 경증장애인 : 4.3%</li>
+                        <li>취약계층 : 4.2%</li>
+                        <h3></h3>
+                    </div>
+                </div>
+            <span class="modal-close">닫기</span>
+            </div>
+        </div>    
+    </div>
+</modal>
+
+<footer class="footer">
+    <div class="footer_text_box">
+        <nav>
+            <p><a href="#">개인정보처리방침</a></p>
+            <p><a href="#">여행약관</a></p>
+            <p><a href="#">이용약관</a></p>
+            <p><a href="#">여행보험</a></p>
+            <p><a href="#">환불</a></p>
+            <p><a href="#">상담</a></p>
+        </nav>
+    </div>
+    <div class="footer_box container">
+       <div class="footer_logo">
+            <img src="img/logo-2.png" alt="">
+            <div class="footer_logo_text">
+                <li>(주)Sheraton <span>|</span> 대표이사: 이성환 <span>|</span> 사업자등록번호: 102-56-4848</li>
+                <li>서울특별시 중구 퇴계로8길 31-9 <span>|</span> TEL: 02-2586-2741 <span>|</span> FAX: 02-254-1024 </li>
+                <li>Copyright (c) 2022 Sheraton. All rights reserved</li>
+                <li></li>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<script>
+    var selbt = document.getElementsByClassName("selbt");
+    function handleClick(event) {
+      console.log(event.target);
+      // console.log(this);
+      // 콘솔창을 보면 둘다 동일한 값이 나온다
+    
+      console.log(event.target.classList);
+    
+      if (event.target.classList[0] === "clicked") {
+        event.target.classList.remove("clicked");
+      } else {
+        for (var i = 0; i < selbt.length; i++) {
+            selbt[i].classList.remove("clicked");
+        }
+    
+        event.target.classList.add("clicked");
+      }
+    }
+    
+    function init() {
+      for (var i = 0; i < selbt.length; i++) {
+        selbt[i].addEventListener("click", handleClick);
+      }
+    }
+    init();
+</script>
+<script src="js/modal-1.js"></script>
+</body>
+</html>
