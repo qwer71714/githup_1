@@ -23,7 +23,7 @@
     padding-bottom:50px;    
 }
 
-.modal-body{background-color: #fff;  text-align: center; padding:10px; z-index: 1000;}  
+.modal-body{background-color: #fff;  text-align: center; padding:10px; z-index: 1000; border-radius: 20px;}  
 
 .modal-close{
     position: absolute;
@@ -42,7 +42,8 @@
 
 
 /* 모달창 body */
-.modal-body-text h1{font-size: 20px;}
+.ps-box{padding: 22px;}
+.modal-body-text h1{font-size: 22px; padding-top: 30px;}
 .ps{margin-top: 50px; text-align: left; padding: 10px;}
 .ps-1{margin-top: 22px;}
 .ps h2{margin-bottom: 20px; font-size: 22px;}
