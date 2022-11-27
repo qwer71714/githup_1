@@ -21,8 +21,18 @@
 .des_button a:hover{background-color: #000; color: #fff;}
 
 /* red 서비스페이지 */
+.clicked{color: #fff; background-color: #000; cursor: default;}
 .rating_text{display: flex; margin-top: 100px; justify-content: space-between; font-size: 23px; border-bottom: 1px solid #000; background-color: rgb(241, 241, 241); cursor: pointer;}
 .rating_text>div{padding: 3px 75px; font-family: 'Judson', serif; font-weight: 900;}
+
+
+
+.clickt{background-color: #000; cursor: default;}
+.rating_text-2{display: flex; text-align: center; justify-content: center; margin-top: 50px; cursor: pointer;}
+.rating_text-2>div{border: 1px solid #000; padding: 5px; border-radius: 100%; margin: 0px 8px;}
+
+
+
 
 .rat_box{margin-top: 50px;}
     
@@ -31,6 +41,10 @@
 .bx span{font-size: 22px;}
 .bx h1{font-size: 18px; margin-bottom: 12px; font-family: 'Noto Sans KR', sans-serif;}
 .bx li{padding: 0px 12px; font-family: 'Noto Sans KR', sans-serif; font-size: 14px; color: rgb(69, 69, 69); margin-top: 4px;}
-#bg{cursor: pointer;}
 
+#p1,#p2,#p3{border: 1px solid #000; padding: 10px; cursor: pointer; margin-top: 40px; width: 20%; text-align: center;}
+
+#p1:hover{background-color: #000; color: #fff;}
+#p2:hover{background-color: #000; color: #fff;}
+#p3:hover{background-color: #000; color: #fff;}
 

@@ -1,3 +1,4 @@
+// index-1
 $(function(){
     $('#hotel-bt-1').click(function(){
         $('#hoterl-1').css('display','block');
@@ -16,6 +17,7 @@ $(function(){
         $('#hoterl-1,#hoterl-3,#hoterl-2').hide();
     })
 })
+
 
 // index-2
 $(function(){
@@ -41,6 +43,29 @@ $(function(){
         $('#rating-1,#rating-3,#rating-2,#rating-4').hide();
     })
 })
+
+
+// index-2-1
+$(function(){
+    $('#ps-bix-bt-1').click(function(){
+        $('#ps-1').css('display','block');
+        $('#ps-2').hide();
+    })
+
+    $('#ps-bix-bt-2').click(function(){
+        $('#ps-2').css('display','block');
+        $('#ps-1').hide();
+    })
+})
+
+
+
+
+
+
+
+
+
 
 var selbt = document.getElementsByClassName("selbt");
     
@@ -68,3 +93,31 @@ function init() {
   }
 }
 init();
+
+
+var selen = document.getElementsByClassName("selen");
+
+function grumblingClick(event) {
+  console.log(event.target);
+//   console.log(this);
+  // 콘솔창을 보면 둘다 동일한 값이 나온다
+
+  console.log(event.target.classList);
+
+  if (event.target.classList[0] === "clickt") {
+    event.target.classList.remove("clickt");
+  } else {
+    for (var i = 0; i < selen.length; i++) {
+        selen[i].classList.remove("clickt");
+    }
+
+    event.target.classList.add("clickt");
+  }
+}
+
+function init2() {
+  for (var i = 0; i < selen.length; i++) {
+    selen[i].addEventListener("click", grumblingClick);
+  }
+}
+init2();

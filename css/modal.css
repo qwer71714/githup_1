@@ -6,7 +6,7 @@
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow-y: auto; /* Enable scroll if needed */
+    overflow:auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */}
 
@@ -45,6 +45,8 @@
 .ps-box{padding: 22px;}
 .modal-body-text h1{font-size: 22px; padding-top: 30px;}
 .ps{margin-top: 50px; text-align: left; padding: 10px;}
+.iops>div{border-bottom: 1px solid #000; margin-top: 25px; padding-bottom: 15px; width: 50%;}
 .ps-1{margin-top: 22px;}
 .ps h2{margin-bottom: 20px; font-size: 22px;}
 .ps li{font-size: 14px; color: rgb(69, 69, 69); padding: 0px 30px; margin-top: 4px;}
+#io{padding-left: 40px; margin-top: 5px;}
